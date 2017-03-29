@@ -16,7 +16,7 @@ class GameScene: SKScene {
     var orangeSprite:SKSpriteNode?
     var bananaSprite:SKSpriteNode?
     var bellSprite:SKSpriteNode?
-    
+    var spinSprite:SKSpriteNode?
     
     
     override func didMove(to view: SKView) {
@@ -47,6 +47,13 @@ class GameScene: SKScene {
         bellSprite?.position = CGPoint(x: 292, y: 260)
         bellSprite?.zPosition = 1 // order in layer
         self.addChild(bellSprite!)
+        
+        
+        spinSprite = SKSpriteNode(imageNamed: "spin")
+        spinSprite?.scale(to: CGSize(width: 70, height: 70))
+        spinSprite?.position = CGPoint(x: 186 , y: 60)
+        spinSprite?.zPosition = 1 // order in layer
+        self.addChild(spinSprite!)
         
         
     }
